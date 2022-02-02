@@ -1,0 +1,10 @@
+{
+    "solidity.compileUsingRemoteVersion": "v0.8.11+commit.d7f03943",
+    "prettier.tabWidth": 4,
+    "liveServer.settings.https": {
+        "enable": true,
+        "key": "/home/username/ssl/key.pem",
+        "cert": "/home/username/ssl/cert.pem",
+        "passphrase": ""
+    }
+}
