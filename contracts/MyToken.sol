@@ -187,16 +187,10 @@ contract MyToken is Context, ERC721, Ownable, IERC2981, ERC165Storage {
         override
         returns (string memory)
     {
-        require(
-            _exists(tokenId),
-            "ERC721Metadata: URI query for nonexistent token"
-        );
+        require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
         string memory baseTokenURI = _baseURI();
         string memory id = Strings.toString(tokenId);
-        return
-            bytes(baseTokenURI).length > 0
-                ? string(abi.encodePacked(baseTokenURI, id, ".json"))
-                : "";
+        return bytes(baseTokenURI).length > 0 ? string(abi.encodePacked(baseTokenURI, id, ".json")) : "";
     }
 
     /**
