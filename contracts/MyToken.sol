@@ -75,7 +75,7 @@ contract MyToken is Context, ERC721, Ownable, IERC2981, ERC165Storage {
      */
     function devMint(address to_) public onlyOwner {
         _devMints.increment();
-        require(_devMints.current() <= maxDevMints, "Dev mint supply exhausted");
+        require(_devMints.current() <= maxDevMints, "Dev Mint Supply Depleted");
         require(_tokenIds.current() < maxSupply + maxDevMints, "Supply Depleted");
         _mint(to_);
     }

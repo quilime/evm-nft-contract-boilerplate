@@ -293,7 +293,7 @@ contract(contractName, (accounts) => {
             }
 
             // attempt to mint an extra dev to test token limit
-            const res = "Dev mint supply exhausted";
+            const res = "Dev Mint Supply Depleted";
             console.log(_c(`Expecting revert for "${res}"`, c.g));
             await expectRevert(this.contract.devMint(_randAccount()), res);
         }
