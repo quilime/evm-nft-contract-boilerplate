@@ -2,7 +2,13 @@
 
 This is a demo of a basic, yet fully featured [ERC-721](https://ethereum.org/en/developers/docs/standards/tokens/erc-721/). This project can be used as a tutorial, demo/reference or starting point for creating an NFT contract on Ethereum or another EVM blockchain such as Polygon, Avalanche, and others.
 
-The included contract is not optimized for deployment gas costs. Rather, it's intended to be a basic yet comprehensive and clear starting point. For any optimization improvements or suggestions, submit a pull request or issue.
+## About NFT's
+
+At its base level, an NFT (Non-Fungable Token) is a unique tokenID that can be transfered between accounts on a blockchain. They are defined by a code contract (Smart Contract), and in the case of Ethereum, they written in [Solidity](https://soliditylang.org/). Usually, the tokenID is linked to an off-chain metadata file [1](https://docs.opensea.io/docs/metadata-standards) -- a JSON document that contains the description, name, link to other content, and other information regarding the token. Many times this is an image or other media, making it a popular method for artists to distribute limited editions of a digital artwork. It's best practice to store this metadata, and the corresponding files, on an immutable distributed network, such as [IPFS](https://ipfs.io/) or [ARWeave](https://www.arweave.org/), but there are no rules or standards to this practice.
+
+An NFT's token identifier (tokenID) is an integer defined in the contract that increments after every transfer (Mint), until it hits an optional, arbitrary limit resulting in what can be referred to as "artificial scarcity". This is by design, and allows certain amount of otherwise infinite digital tokens to exist. It is up to the contract developer to define these limits. Unless they are explicitely designed to be mutable, all variables and methods in a contract are immutable upon deployment to a network.
+
+The included contract is not optimized for deployment gas costs. Rather, it's intended to be a basic yet comprehensive and clear starting point to understand how NFT's work. For any optimization improvements or suggestions, submit a pull request or issue.
 
 The contract code features
 
