@@ -2,7 +2,7 @@
 
 This is a demo of a basic, yet fully featured [ERC-721](https://ethereum.org/en/developers/docs/standards/tokens/erc-721/). This project can be used as a tutorial, demo/reference or starting point for creating an NFT contract on an Ethereum, or other EVM blockchain such as Polygon, Avalanche, and others.
 
-The included contract is not optomized for deployment gas costs. Rather, it's intended to be a basic yet comprehensive and clear starting point. For any optimization improvements or suggestions, submit pull requests or issue.
+The included contract is not optimized for deployment gas costs. Rather, it's intended to be a basic yet comprehensive and clear starting point. For any optimization improvements or suggestions, submit pull requests or issue.
 
 The contract code features
 
@@ -12,7 +12,7 @@ The contract code features
     - Set/Get Royalties Address
     - Set/Get Royalties Percentage
 - Mint function, with max supply
-- Rserved Mint function (restricted to contract owner) dev mints, with max reserved supply
+- Reserved Mint function (restricted to contract owner) dev mints, with max reserved supply
 - Per-TokenID Metadata
 - Set/Get Contract Metadata
 - Set/Get Mint Open/Closed
@@ -46,7 +46,7 @@ VSCode is the intended IDE for this project, as it has some convenient plugins t
 
 ### Verification
 
-- [truffle-plugin-verify](https://www.npmjs.com/package/truffle-plugin-verify) - A Truffle plugin to verify the contract on Etherscan, or equivilent EVM APIs
+- [truffle-plugin-verify](https://www.npmjs.com/package/truffle-plugin-verify) - A Truffle plugin to verify the contract on Etherscan, or equivalent EVM APIs
 
 
 ### Client / Frontend
@@ -159,7 +159,7 @@ npx truffle run verify MyToken --network rinkeby
 Deploy to mainnet:
 
 Note: You must set your gas to match the current network.
-At the top of `./truffle-config.js` you will notice a variable `gasPrice`, of which you can set in gwei to match the current gas price of the network. To garuntee the contract will deploy, it's wise to give it a little more gas than the average reported price.
+At the top of `./truffle-config.js` you will notice a variable `gasPrice`, of which you can set in gwei to match the current gas price of the network. To guarantee the contract will deploy, it's wise to give it a little more gas than the average reported price.
 
 ```
 npx truffle migrate --network mainnet
