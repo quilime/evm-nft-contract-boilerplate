@@ -150,22 +150,20 @@ In the Metamask extension with your browser, enabled `Show Test Networks` in you
 
 Now that you are satisfied with your Contract and you've run extensive testing, you may be ready to deploy to testnets.
 
-Deploy to rinkeby:
+Deploy to rinkeby and verify the contract
 ```
 npx truffle migrate --network rinkeby
+npx truffle run verify MyToken --network rinkeby
 ```
 
 Deploy to mainnet:
 
 Note: You must set your gas to match the current network.
 At the top of `./truffle-config.js` you will notice a variable `gasPrice`, of which you can set in gwei to match the current gas price of the network. To garuntee the contract will deploy, it's wise to give it a little more gas than the average reported price.
+
 ```
 npx truffle migrate --network mainnet
-```
-
-Verify contract on network of your deployment
-```
-npx truffle run verify MyToken --network <network>
+npx truffle run verify MyToken --network mainnet
 ```
 
 
