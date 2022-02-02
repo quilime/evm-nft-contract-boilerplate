@@ -69,30 +69,29 @@ npm install
 ```
 .
 ├── .env                        # environment variables
+├── package.json
+├── README.md                   # this readme
+├── truffle-config.js           # truffle config
 ├── .vscode
-    ├── settings.json           # vscode settings
+    ├── settings.json           # vscode settings for solidity compiler version and local https
 ├── build
-│   ├── contracts               # contract builds
+│   ├── contracts               # contract build location
+        ├── ...
 ├── client
     ├── artifacts
-        ├── MyToken.json        # compiled contract ABI, included by the client
+        ├── MyToken.json        # compiled contract ABI
     ├── index.html              # client website
     ├── script.js               # client website js script
 ├── contracts
-    ├── MyToken.json            # the token contract
+    ├── MyToken.sol             # the contract code
 ├── ipfs                        # various infura ipfs convenience scripts
     ├── ipfs-pin.sh             # pin an existing ipfs url via infura
     ├── ipfs-upload-folder.sh   # upload an entire folder to ipfs via infura
     ├── ipfs-upload.sh          # upload and pin a file to ipfs via infura
 ├── migrations
     ├── 1_deploy.js             # contract deployment script
-├── package.json
-├── README.md                   # this readme
 ├── test                        # test suites
     ├── MyToken.test.js         # test suite for MyToken contract
-├── truffle-config.js           # truffle config
-
-
 ```
 
 ## Development
@@ -122,6 +121,7 @@ npm test
 
 ## Client Dev
 
+
 ### Set up HTTPS hosting
 
 HTTPS is required for testing locally with Web3Modal. You can set this up how you prefer. The following steps are for VSCode and the Live Server plugin.
@@ -129,6 +129,7 @@ HTTPS is required for testing locally with Web3Modal. You can set this up how yo
 1. Set up local https testing, for example with [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) with [mkcert](https://github.com/FiloSottile/mkcert)
 1. Edit your `.vscode/settings.json` to point to the correct cert locations.
 1. Host the `./client/index.html` file with Live Server (right click on `/client/index.html`, select Open WIth Live Server), or your local https server of you choice.
+
 
 ### Set up Metamask
 
@@ -143,8 +144,6 @@ In the Metamask extension with your browser, enabled `Show Test Networks` in you
 1. Add various accounts via their private keys (given to you by ganache-cli in the previous steps) to metamask to interact with the contract as various local accounts.
 1. Keep an eye on the browser's developer console and the Ganache terminal window to see local activity.
 1. If you reset Ganache, you may have to reset the nonce in metamask for a given account. Reset the nonce by going into `Settings > Advanced > Reset Account`. This is a non-destructive action, but it will remove all transaction history in Metamask for the selected account.
-
-
 
 
 ## Deployment to Testnets and Mainnets
