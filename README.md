@@ -148,7 +148,7 @@ In the Metamask extension with your browser, enabled `Show Test Networks` in you
 
 ## Deployment to Testnets and Mainnets
 
-Now that you are satisfied with your Contract and you've run extensive testing, you may be ready to deploy to testnets.
+Now that you are satisfied with your Contract and you've run extensive testing, you may be ready to deploy to testnets. Be sure to change your private key in the .env to the account you wish to deploy the contract with on the respective network. You must also have enough Eth to cover deployment costs.
 
 Deploy to rinkeby and verify the contract
 ```
