@@ -138,7 +138,7 @@ In the Metamask extension with your browser, enabled `Show Test Networks` in you
 - Chain ID: `1337`
 - Currency Symbol: `ETH`
 
-1. Click "connect" in the client example, and interact with the contract.
+1. Click the "Connect Wallet" button in the client example to interact with the contract.
 1. Add various accounts via their private keys (given to you by ganache-cli in the previous steps) to metamask to interact with the contract as various local accounts.
 1. Keep an eye on the browser's developer console and the Ganache terminal window to see local activity.
 1. If you reset Ganache, you may have to reset the nonce in metamask for a given account. Reset the nonce by going into `Settings > Advanced > Reset Account`. This is a non-destructive action, but it will remove all transaction history in Metamask for the selected account.
