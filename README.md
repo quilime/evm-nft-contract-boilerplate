@@ -83,13 +83,15 @@ npm install
     ├── index.html              # client website
     ├── script.js               # client website js script
 ├── contracts
+    ├── Migrations.sol          # (optional) truffle migration contract
     ├── MyToken.sol             # the contract code
 ├── ipfs                        # various infura ipfs convenience scripts
     ├── ipfs-pin.sh             # pin an existing ipfs url via infura
     ├── ipfs-upload-folder.sh   # upload an entire folder to ipfs via infura
     ├── ipfs-upload.sh          # upload and pin a file to ipfs via infura
 ├── migrations
-    ├── 1_deploy.js             # contract deployment script
+    ├── 1_initial_migrations.js # (optional) truffle migration contract for local testing
+    ├── 2_deploy.js             # contract deploy
 ├── test                        # test suites
     ├── MyToken.test.js         # test suite for MyToken contract
 ```
@@ -148,7 +150,8 @@ In the Metamask extension with your browser, enabled `Show Test Networks` in you
 
 ## Deployment to Testnets and Mainnets
 
-Now that you are satisfied with your Contract and you've run extensive testing, you may be ready to deploy to testnets. Be sure to change your private key in `./.env` to the account you wish to be the deployer on the respective network. You must also have enough Eth in that account to cover the gas costs of deployment.
+Now that you are satisfied with your Contract and you've run extensive testing, you may be ready to deploy to testnets. Be sure to change your private key in `./.env` to the account you wish to be the deployer on the respective network. You must also have enough Eth in that account to cover the gas costs of deployment. Before deploying, you can safely remove `./migrations/1_initial_migrations.js` and `./contracts/Migrations.sol`, as they are needless on Test and Mainnets.
+
 
 Deploy to rinkeby and verify the contract
 ```
