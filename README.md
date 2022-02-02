@@ -68,7 +68,7 @@ npm install
 ## Project Structure
 ```
 .
-├── README.md                   # this readme
+├── .env                        # environment variables
 ├── .vscode
     ├── settings.json           # vscode settings
 ├── build
@@ -87,6 +87,7 @@ npm install
 ├── migrations
     ├── 1_deploy.js             # contract deployment script
 ├── package.json
+├── README.md                   # this readme
 ├── test                        # testing suite
     ├── MyToken.test.js         # test suite for MyToken contract
 ├── truffle-config.js           # truffle config
