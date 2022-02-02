@@ -1,4 +1,5 @@
 #!/bin/sh
+source .env
 DIR=$1
 curl -X POST -F file="@${DIR}" \
 -H "Content-Type: application/octet-stream" \
