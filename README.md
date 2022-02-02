@@ -6,15 +6,15 @@ The included contract is not optomized for deployment gas costs. Rather, it's in
 
 The contract code features
 
-- Support for EIP-721 (Standard Token) [https://eips.ethereum.org/EIPS/eip-721]()
-- Support for EIP 165 (Introspection) [https://eips.ethereum.org/EIPS/eip-165]()
-- Support for EIP-2981 (Royalties) [https://eips.ethereum.org/EIPS/eip-2981]()
+- Support for [EIP-721 / Token Standard](https://eips.ethereum.org/EIPS/eip-721)
+- Support for [EIP 165 / Introspection](https://eips.ethereum.org/EIPS/eip-165)
+- Support for [EIP-2981 / Royalties](https://eips.ethereum.org/EIPS/eip-2981)
     - Set/Get Royalties Address
     - Set/Get Royalties Percentage
 - Mint function, with max supply
 - Rserved Mint function (restricted to contract owner) dev mints, with max reserved supply
-- Per-Token ID Metadata
-- Set/Get Contract Metadata (OpenSea)
+- Per-TokenID Metadata
+- Set/Get Contract Metadata
 - Set/Get Mint Open/Closed
 - Set/Get Base Token Metadata URI
 - Token Supply counters via [Open Zeppelin / Counters](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Counters.sol)
@@ -22,7 +22,7 @@ The contract code features
 
 
 
-The front-end client example is built as a single html file with an accompanying js file.
+Front-end client example is built as a single html file with an accompanying js file.
 
 VSCode is the intended IDE for this project, as it has some convenient plugins to aid development, but is not required. You can use the IDE of your choice.
 
