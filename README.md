@@ -8,7 +8,7 @@ At its base level, an NFT (Non-Fungable Token) is a unique tokenID that can be t
 
 An NFT's token identifier (tokenID) is an integer defined in the contract that increments after every transfer (Mint), until it hits an optional, arbitrary limit resulting in what can be referred to as "artificial scarcity". This is by design, and allows certain amount of otherwise infinite digital tokens to exist. It is up to the contract developer to define these limits. Unless they are explicitely designed to be mutable, all variables and methods in a contract are immutable upon deployment to a network.
 
-The included contract is not optimized for deployment gas costs. Rather, it's intended to be a basic yet comprehensive and clear starting point to understand how NFT's work. For any optimization improvements or suggestions, submit a pull request or issue.
+Depeneding on the amount of data they store and length of their code, contracts fluctuate in deployment costs and there are many tricks to optomize them. The contract included in this repo is not optimized for gas costs. Rather, it's intended to be a basic yet comprehensive and clear starting point to understand how NFT's work. For any optimization improvements or suggestions, submit a pull request or issue.
 
 The contract code features
 
