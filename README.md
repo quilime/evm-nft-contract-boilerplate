@@ -7,7 +7,7 @@ The included contract is not optimized for deployment gas costs. Rather, it's in
 The contract code features
 
 - Support for [EIP-721 / Token Standard](https://eips.ethereum.org/EIPS/eip-721)
-- Support for [EIP 165 / Introspection](https://eips.ethereum.org/EIPS/eip-165)
+- Support for [EIP-165 / Introspection](https://eips.ethereum.org/EIPS/eip-165)
 - Support for [EIP-2981 / Royalties](https://eips.ethereum.org/EIPS/eip-2981)
     - Set/Get Royalties Address
     - Set/Get Royalties Percentage
