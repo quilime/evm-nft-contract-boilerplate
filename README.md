@@ -88,7 +88,7 @@ npm install
     ├── 1_deploy.js             # contract deployment script
 ├── package.json
 ├── README.md                   # this readme
-├── test                        # testing suite
+├── test                        # test suites
     ├── MyToken.test.js         # test suite for MyToken contract
 ├── truffle-config.js           # truffle config
 
