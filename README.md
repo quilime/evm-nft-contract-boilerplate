@@ -133,7 +133,7 @@ HTTPS is required for testing locally with Web3Modal. You can set this up how yo
 
 In the Metamask extension with your browser, enabled `Show Test Networks` in your browser and/or add Ganache as your local EVM Chain
 
-- Network Name: `Ganache Local`
+- Network Name: `localhost`
 - RPC URL: `http://localhost:8545`
 - Chain ID: `1337`
 - Currency Symbol: `ETH`
