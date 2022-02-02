@@ -2,7 +2,7 @@
 
 This is a demo of a basic, yet fully featured [ERC-721](https://ethereum.org/en/developers/docs/standards/tokens/erc-721/). This project can be used as a tutorial, demo/reference or starting point for creating an NFT contract on Ethereum or another EVM blockchain such as Polygon, Avalanche, and others.
 
-The included contract is not optimized for deployment gas costs. Rather, it's intended to be a basic yet comprehensive and clear starting point. For any optimization improvements or suggestions, submit pull requests or issue.
+The included contract is not optimized for deployment gas costs. Rather, it's intended to be a basic yet comprehensive and clear starting point. For any optimization improvements or suggestions, submit a pull request or issue.
 
 The contract code features
 
