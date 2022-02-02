@@ -69,7 +69,7 @@ npm install
 ```
 .
 ├── .env                        # environment variables
-├── package.json
+├── package.json                # package.json -- includes run scripts
 ├── README.md                   # this readme
 ├── truffle-config.js           # truffle config
 ├── .vscode
