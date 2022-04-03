@@ -3,22 +3,22 @@
   "version": "1.0.0",
   "description": "Ethereum ERC721 NFT Boilerplate",
   "scripts": {
-    "ganache-cli": "npx ganache-cli --deterministic --gas-price 60000000000",
+    "ganache": "npx ganache --deterministic --gas-price 60000000000",
     "migrate:client": "cp ./build/contracts/MyToken.json client/artifacts/",
     "console:dev": "npx truffle console --network development",
     "migrate:dev": "npx truffle migrate --network development",
     "compile": "npx truffle compile",
     "test": "npx truffle test"
   },
-  "author": "",
-  "license": "",
+  "author": "@quilime",
+  "license": "MIT",
   "devDependencies": {
     "@openzeppelin/contracts": "^4.4.2",
     "@openzeppelin/test-helpers": "^0.5.15",
     "@truffle/hdwallet-provider": "^2.0.2",
+    "ganache": "^7.0.3",
     "chai": "^4.3.6",
     "dotenv": "^15.0.0",
-    "ganache-cli": "^6.12.2",
     "truffle": "^5.4.31",
     "truffle-plugin-verify": "^0.5.21"
   },
