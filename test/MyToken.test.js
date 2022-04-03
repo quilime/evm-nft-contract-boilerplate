@@ -30,11 +30,13 @@ const _c = (str, color) => {
 
 // Start test block
 contract(contractName, (accounts) => {
+    // get random account that is not owner account (0)
     const _randAccount = () => {
         const randAccountIndex = Math.floor(Math.random() * (accounts.length - 1)) + 1; // not owner account (0)
         return accounts[randAccountIndex];
     };
 
+    // dev mint convenience method
     const _mintDev = async (contract, _to) => {
         console.log("Minting Dev Token to account", _c(_to, c.g));
         const mintEvent = await contract.devMint(_to);
@@ -47,6 +49,7 @@ contract(contractName, (accounts) => {
         return mintEvent;
     };
 
+    // mint conveninence method
     const _mint = async (contract, _from) => {
         console.log("Minting with account", _c(_from, c.g));
         const price = parseInt((await contract.price()).toString());
