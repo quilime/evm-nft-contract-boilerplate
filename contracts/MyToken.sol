@@ -76,7 +76,6 @@ contract MyToken is Context, ERC721, Ownable, IERC2981, ERC165Storage {
     function devMint(address to_) public onlyOwner {
         _devMints.increment();
         require(_devMints.current() <= maxDevMints, "Dev Mint Supply Depleted");
-        require(_tokenIds.current() < maxSupply + maxDevMints, "Supply Depleted");
         _mint(to_);
     }
 
@@ -135,9 +134,7 @@ contract MyToken is Context, ERC721, Ownable, IERC2981, ERC165Storage {
         override(ERC721, IERC165, ERC165Storage)
         returns (bool)
     {
-        return
-            interfaceId == type(IERC2981).interfaceId ||
-            super.supportsInterface(interfaceId);
+        return interfaceId == type(IERC2981).interfaceId || super.supportsInterface(interfaceId);
     }
 
     /**
@@ -181,16 +178,14 @@ contract MyToken is Context, ERC721, Ownable, IERC2981, ERC165Storage {
      * @param tokenId - the tokenid
      * @return the tokenURI string
      */
-    function tokenURI(uint256 tokenId)
-        public
-        view
-        override
-        returns (string memory)
-    {
+    function tokenURI(uint256 tokenId) public view override returns (string memory) {
         require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
         string memory baseTokenURI = _baseURI();
         string memory id = Strings.toString(tokenId);
-        return bytes(baseTokenURI).length > 0 ? string(abi.encodePacked(baseTokenURI, id, ".json")) : "";
+        return
+            bytes(baseTokenURI).length > 0
+                ? string(abi.encodePacked(baseTokenURI, id, ".json"))
+                : "";
     }
 
     /**
